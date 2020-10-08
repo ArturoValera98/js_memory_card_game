@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+  color: #f5edf0;
+  background: #424c55;
+  text-align: center;
+  padding: 1em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+/* MAIN */
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60vw;
+  justify-content: space-evenly;
+  margin: auto;
+  perspective: 1000px;
+}
+
+@media only screen and (max-width: 600px) {
+  #main {
+    width: 80vw;
+  }
+}
+
+.card {
+  height: 7.5rem;
+  width: 25%;
+  /* margin-top: 0.2em;
+  margin-bottom: 0.25em; */
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  border: 1px solid white;
+}
+
+@media only screen and (max-width: 400px) {
+  h1 {
+    font-size: 2em;
+  }
+  .card {
+    width: 80vw;
+    height: 4rem;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    width: 90vw;
+    height: 6rem;
+    width: 25%;
+  }
+  #main {
+    width: 60vw;
+  }
+}
+
+.back_card {
+  background: #886f68;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.back_card,
+.front_card {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front_card {
+  transform: rotateY(180deg);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+#tries {
+  margin: 1em 0px;
+  text-align: center;
+  visibility: hidden;
+}
+/* BUTTONS  */
+
+#start_game {
+  font-size: 1.2em;
+  color: white;
+  display: block;
+  margin: auto;
+  margin-top: 1em;
+  background: #3d2c2e;
+  padding: 0.5em;
+  border: none;
+  border-radius: 10px;
+}
+
+#difficulties {
+  display: none;
+}
+
+.level {
+  color: white;
+  flex: 1;
+  margin: 1em;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3em;
+  display: border;
+  font-size: 1em;
+}
+
+#one {
+  background: lightgreen;
+}
+
+#two {
+  background: orange;
+}
+
+#three {
+  background: red;
+}
+
+.level:hover {
+  transform: scale(1.15);
+}
+
+/* BUTTONS */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+#reveal {
+  display: block;
+  margin: 1em;
+  font-size: 1em;
+  color: white;
+  display: block;
+  background: rgba(136, 3, 213, 0.734);
+  padding: 0.5em;
+  border: none;
+  border-radius: 10px;
+  visibility: hidden;
+  background: #3d2c2e;
+}
+
+#new_game {
+  display: block;
+  margin: 1em;
+  font-size: 1em;
+  color: white;
+  display: block;
+  background: rgba(136, 3, 213, 0.734);
+  padding: 0.5em;
+  border: none;
+  border-radius: 10px;
+  visibility: hidden;
+  background: #3d2c2e;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
